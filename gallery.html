@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse local wedding photo albums from Vows & Veil with an interactive lightbox for ceremony, reception, and detail inspiration."
+    />
+    <title>Gallery | Vows &amp; Veil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page" data-page="gallery">
+    <a class="skip-link skip-link--global" href="#main-content">Skip to content</a>
+    <div class="site-shell" data-shell-root>
+      <main class="page-main" id="main-content" data-main>
+        <section class="page-hero">
+          <article class="page-hero__panel reveal">
+            <p class="section-label">Gallery</p>
+            <h1>Open a moment and see the full album behind it.</h1>
+            <p>Each card below opens its own image set, so you only browse photos from that exact wedding scene.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="gallery-toolbar reveal">
+            <button class="filter-chip is-active" type="button" data-gallery-filter="all">All albums</button>
+            <button class="filter-chip" type="button" data-gallery-filter="ceremony">Ceremony</button>
+            <button class="filter-chip" type="button" data-gallery-filter="reception">Reception</button>
+            <button class="filter-chip" type="button" data-gallery-filter="details">Details</button>
+          </div>
+
+          <div class="gallery-grid gallery-grid--albums">
+            <div class="gallery-item reveal" data-gallery-item data-gallery-album data-category="ceremony">
+              <article class="gallery-card">
+                <button class="gallery-button" type="button" data-gallery-trigger data-start-index="0">
+                  <div class="gallery-card__image">
+                    <img src="assets/images/gallery/cathedral-1.jpg" alt="Cathedral wedding entrance" loading="lazy" />
+                  </div>
+                  <div class="gallery-card__caption">
+                    <strong>Cathedral Entrance</strong>
+                    <span>Ceremony album</span>
+                  </div>
+                </button>
+
+                <div class="visually-hidden">
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/cathedral-1.jpg"
+                    data-title="Cathedral Entrance"
+                    data-caption="Formal processional framing"
+                    data-alt="Cathedral wedding entrance"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/cathedral-2.jpg"
+                    data-title="Cathedral Entrance"
+                    data-caption="Aisle perspective and ceremony atmosphere"
+                    data-alt="Wedding ceremony inside a cathedral"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/cathedral-3.jpg"
+                    data-title="Cathedral Entrance"
+                    data-caption="Classic ceremony detail"
+                    data-alt="Bride and groom during a church wedding"
+                  ></button>
+                </div>
+              </article>
+            </div>
+
+            <div class="gallery-item reveal" data-gallery-item data-gallery-album data-category="ceremony">
+              <article class="gallery-card">
+                <button class="gallery-button" type="button" data-gallery-trigger data-start-index="0">
+                  <div class="gallery-card__image">
+                    <img src="assets/images/gallery/garden-1.jpg" alt="Outdoor wedding scene after the vows" loading="lazy" />
+                  </div>
+                  <div class="gallery-card__caption">
+                    <strong>After the Vows</strong>
+                    <span>Garden ceremony album</span>
+                  </div>
+                </button>
+
+                <div class="visually-hidden">
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/garden-1.jpg"
+                    data-title="After the Vows"
+                    data-caption="Open-air ceremony styling"
+                    data-alt="Outdoor wedding ceremony styling"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/garden-2.jpg"
+                    data-title="After the Vows"
+                    data-caption="Fresh garden portrait energy"
+                    data-alt="Wedding couple in an outdoor ceremony setting"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/garden-3.jpg"
+                    data-title="After the Vows"
+                    data-caption="Ceremony lawn and floral framing"
+                    data-alt="Garden wedding setup with flowers"
+                  ></button>
+                </div>
+              </article>
+            </div>
+
+            <div class="gallery-item reveal" data-gallery-item data-gallery-album data-category="reception">
+              <article class="gallery-card">
+                <button class="gallery-button" type="button" data-gallery-trigger data-start-index="0">
+                  <div class="gallery-card__image">
+                    <img src="assets/images/gallery/reception-1.jpg" alt="Champagne-toned wedding reception setup" loading="lazy" />
+                  </div>
+                  <div class="gallery-card__caption">
+                    <strong>Champagne Reception</strong>
+                    <span>Reception album</span>
+                  </div>
+                </button>
+
+                <div class="visually-hidden">
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/reception-1.jpg"
+                    data-title="Champagne Reception"
+                    data-caption="Candlelight and soft neutral styling"
+                    data-alt="Champagne-toned wedding reception setup"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/reception-2.jpg"
+                    data-title="Champagne Reception"
+                    data-caption="Reception floral layers and place settings"
+                    data-alt="Wedding reception table styling"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/reception-3.jpg"
+                    data-title="Champagne Reception"
+                    data-caption="Warm evening dinner atmosphere"
+                    data-alt="Elegant reception evening scene"
+                  ></button>
+                </div>
+              </article>
+            </div>
+
+            <div class="gallery-item reveal" data-gallery-item data-gallery-album data-category="details">
+              <article class="gallery-card">
+                <button class="gallery-button" type="button" data-gallery-trigger data-start-index="0">
+                  <div class="gallery-card__image">
+                    <img src="assets/images/gallery/details-1.jpg" alt="Wedding rings and floral styling details" loading="lazy" />
+                  </div>
+                  <div class="gallery-card__caption">
+                    <strong>Styled Details</strong>
+                    <span>Details album</span>
+                  </div>
+                </button>
+
+                <div class="visually-hidden">
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/details-1.jpg"
+                    data-title="Styled Details"
+                    data-caption="Rings, florals, and heirloom details"
+                    data-alt="Wedding rings and floral styling details"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/details-2.jpg"
+                    data-title="Styled Details"
+                    data-caption="Soft textures and bridal accessories"
+                    data-alt="Wedding styling accessories and flowers"
+                  ></button>
+                  <button
+                    type="button"
+                    data-gallery-source
+                    data-src="assets/images/gallery/details-3.jpg"
+                    data-title="Styled Details"
+                    data-caption="Close-up design details"
+                    data-alt="Wedding design detail close-up"
+                  ></button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--tight">
+          <div class="signature-banner reveal">
+            <h2>Better planning gives photographers better moments to capture.</h2>
+            <p>Clean timelines, balanced layouts, and calm rooms always look better on camera.</p>
+            <div class="button-group">
+              <a class="button button--primary" href="services.html">See Planning Services</a>
+              <a class="button button--soft" href="contact.html">Ask About Your Date</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" data-lightbox hidden>
+      <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <div class="lightbox__toolbar">
+          <div>
+            <h2 id="lightbox-title" data-lightbox-title>Gallery image</h2>
+            <p data-lightbox-caption></p>
+          </div>
+
+          <div class="lightbox__actions">
+            <span class="lightbox__counter" data-lightbox-counter>1 / 1</span>
+            <button class="lightbox__button" type="button" aria-label="Zoom image" data-lightbox-zoom aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 5v14" />
+                <path d="M5 12h14" />
+              </svg>
+            </button>
+            <button class="lightbox__button" type="button" aria-label="Toggle fullscreen" data-lightbox-fullscreen>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 4H4v4" />
+                <path d="M16 4h4v4" />
+                <path d="M8 20H4v-4" />
+                <path d="M16 20h4v-4" />
+              </svg>
+            </button>
+            <button class="lightbox__close" type="button" aria-label="Close image viewer" data-lightbox-close>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M6 6l12 12" />
+                <path d="M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="lightbox__viewport" data-lightbox-viewport>
+          <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image" data-lightbox-prev>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="m15 5-7 7 7 7" />
+            </svg>
+          </button>
+
+          <div class="lightbox__stage">
+            <img src="" alt="" data-lightbox-image />
+          </div>
+
+          <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image" data-lightbox-next>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

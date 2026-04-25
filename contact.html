@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Vows & Veil for wedding planning, styling, venue guidance, and coordination."
+    />
+    <title>Contact | Vows &amp; Veil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page" data-page="contact">
+    <a class="skip-link skip-link--global" href="#main-content">Skip to content</a>
+    <div class="site-shell" data-shell-root>
+      <main class="page-main" id="main-content" data-main>
+        <section class="page-hero">
+          <article class="page-hero__panel reveal">
+            <p class="section-label">Contact</p>
+            <h1>Tell us about your wedding and we will guide the next step.</h1>
+            <p>Use the form below or reach us directly by email or phone.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="contact-layout">
+            <div class="contact-stack reveal">
+              <article class="contact-card" id="inquiry-form">
+                <h3>Inquiry form</h3>
+                <p class="form-note">Share the basics and we will reply with the most relevant planning path.</p>
+
+                <form
+                  class="form-grid form-grid--two"
+                  action="https://formsubmit.co/hello@vowsandveil.com"
+                  data-ajax-action="https://formsubmit.co/ajax/hello@vowsandveil.com"
+                  method="POST"
+                  data-contact-form
+                >
+                  <input type="hidden" name="_subject" value="New Vows &amp; Veil wedding inquiry" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input class="visually-hidden" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+
+                  <div class="field">
+                    <label for="name">Full name</label>
+                    <input id="name" name="name" type="text" placeholder="Your full name" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" placeholder="name@example.com" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="wedding-date">Wedding date</label>
+                    <input id="wedding-date" name="wedding-date" type="date" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="budget">Estimated budget</label>
+                    <input id="budget" name="budget" type="number" min="50000" step="1000" placeholder="e.g. 650000" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="guests">Guest count</label>
+                    <input id="guests" name="guest-count" type="number" min="20" max="600" placeholder="e.g. 150" />
+                  </div>
+
+                  <div class="field">
+                    <label for="venue-style">Preferred venue style</label>
+                    <select id="venue-style" name="venue-style">
+                      <option value="">Select one</option>
+                      <option value="garden">Garden</option>
+                      <option value="beach">Beach</option>
+                      <option value="church">Church</option>
+                      <option value="ballroom">Ballroom</option>
+                    </select>
+                  </div>
+
+                  <div class="field field--full">
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell us the atmosphere you want, where you are in planning, and the kind of support you need."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="field field--full">
+                    <button class="button button--primary button--block" type="submit">Send inquiry</button>
+                  </div>
+
+                  <p class="status-message field--full" role="status" aria-live="polite" data-form-status></p>
+                </form>
+              </article>
+            </div>
+
+            <div class="contact-stack reveal">
+              <article class="contact-card">
+                <h3>Direct contact</h3>
+                <div class="contact-grid contact-grid--two">
+                  <div class="contact-method">
+                    <strong>Email</strong>
+                    <a href="mailto:hello@vowsandveil.com">hello@vowsandveil.com</a>
+                  </div>
+                  <div class="contact-method">
+                    <strong>Phone</strong>
+                    <a href="tel:09456918967">09456918967</a>
+                  </div>
+                  <div class="contact-method">
+                    <strong>Studio base</strong>
+                    Bonifacio Global City, Taguig
+                  </div>
+                  <div class="contact-method">
+                    <strong>Response time</strong>
+                    Within one business day
+                  </div>
+                </div>
+
+                <div class="social-list">
+                  <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+                  <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+                  <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">Pinterest</a>
+                </div>
+              </article>
+
+              <article class="contact-card">
+                <h3>Best details to include</h3>
+                <ul class="contact-list">
+                  <li><strong>Date and guest count</strong><span>So we can judge scale and pace correctly.</span></li>
+                  <li><strong>Venue direction</strong><span>Garden, beach, church, or ballroom helps us narrow the best next step.</span></li>
+                  <li><strong>Planning stage</strong><span>Tell us whether you are starting fresh or already booked a few suppliers.</span></li>
+                </ul>
+              </article>
+
+              <article class="map-card">
+                <iframe
+                  src="https://www.google.com/maps?q=Bonifacio%20Global%20City%2C%20Taguig&z=14&output=embed"
+                  title="Map showing Bonifacio Global City in Taguig"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

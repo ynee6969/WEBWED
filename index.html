@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vows & Veil is a refined wedding planning studio for elegant celebrations, venue direction, styling, and calm execution."
+    />
+    <title>Vows &amp; Veil | Wedding Planning Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page" data-page="home">
+    <a class="skip-link skip-link--global" href="#main-content">Skip to content</a>
+    <div class="site-shell" data-shell-root>
+      <main class="page-main" id="main-content" data-main>
+        <section class="hero hero--landing reveal">
+          <div class="hero__media">
+            <video
+              class="hero__video"
+              data-hero-video
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="assets/images/hero-poster.svg"
+            >
+              <source src="assets/videos/14574021_1920_1080_25fps.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="hero__overlay"></div>
+
+          <div class="hero__content">
+            <div class="hero__copy">
+              <p class="section-label">Luxury wedding planning studio</p>
+              <h1 class="hero__title">From dream to "I do," beautifully handled.</h1>
+              <p class="hero__lede">
+                Elegant styling, clear planning, and wedding-day direction for couples who want a polished celebration without the chaos.
+              </p>
+
+              <div class="button-group">
+                <a class="button button--primary" href="contact.html">Plan Your Wedding</a>
+                <a class="button button--soft" href="gallery.html">See Real Moments</a>
+              </div>
+
+              <div class="hero__controls" aria-label="Hero video controls">
+                <button class="hero-control" type="button" data-video-toggle>
+                  <span>Pause video</span>
+                </button>
+                <button class="hero-control" type="button" data-audio-toggle>
+                  <span>Unmute</span>
+                </button>
+              </div>
+
+              <div class="hero__stats">
+                <article class="hero-stat">
+                  <strong>180+</strong>
+                  <span>weddings managed</span>
+                </article>
+                <article class="hero-stat">
+                  <strong>12+</strong>
+                  <span>years of planning</span>
+                </article>
+                <article class="hero-stat">
+                  <strong>1 team</strong>
+                  <span>from brief to send-off</span>
+                </article>
+              </div>
+            </div>
+
+            <aside class="hero__panel">
+              <p class="hero__panel-label">Our signature approach</p>
+              <h2>Soft on the surface. Structured underneath.</h2>
+              <ul class="list-check">
+                <li>Venue guidance based on guest flow, light, and logistics</li>
+                <li>Styling direction that feels timeless instead of trendy</li>
+                <li>Calm coordination so your families stay present</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header reveal">
+            <p class="section-label">Wedding atmosphere</p>
+            <h2>Every part of the day should feel aligned.</h2>
+            <p>We shape the full guest experience, not just a few pretty moments.</p>
+          </div>
+
+          <div class="editorial-grid">
+            <article class="editorial-card reveal">
+              <div class="editorial-card__image">
+                <img src="assets/images/gallery/cathedral-1.jpg" alt="Couple entering a cathedral wedding ceremony" loading="lazy" />
+              </div>
+              <div class="editorial-card__body">
+                <span class="feature-card__kicker">Ceremony</span>
+                <h3>Graceful entrances</h3>
+                <p>Timing, processional flow, and clean visual framing for the moment that sets the tone.</p>
+              </div>
+            </article>
+
+            <article class="editorial-card reveal">
+              <div class="editorial-card__image">
+                <img src="assets/images/gallery/reception-1.jpg" alt="Elegant wedding reception setup" loading="lazy" />
+              </div>
+              <div class="editorial-card__body">
+                <span class="feature-card__kicker">Reception</span>
+                <h3>Warm, polished spaces</h3>
+                <p>Layouts that look beautiful in photos and still work well for dinner, speeches, and dancing.</p>
+              </div>
+            </article>
+
+            <article class="editorial-card reveal">
+              <div class="editorial-card__image">
+                <img src="assets/images/gallery/details-1.jpg" alt="Wedding styling details with rings and florals" loading="lazy" />
+              </div>
+              <div class="editorial-card__body">
+                <span class="feature-card__kicker">Details</span>
+                <h3>Meaning in the details</h3>
+                <p>Florals, heirlooms, paper goods, and styling pieces that feel personal and refined.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header reveal">
+            <p class="section-label">Budget planner</p>
+            <h2>A smarter starting point for your wedding budget.</h2>
+            <p>Adjust the variables below and the calculator will rebalance the full spend plan in real time.</p>
+          </div>
+
+          <div class="calculator-layout">
+            <article class="calculator-card calculator-card--intro reveal">
+              <h3>Budget inputs</h3>
+              <p>Built for real planning choices, not a flat percentage split.</p>
+
+              <div class="form-grid form-grid--two">
+                <div class="field">
+                  <label for="budget-total">Total budget</label>
+                  <input id="budget-total" type="number" min="50000" step="1000" value="650000" data-budget-total />
+                </div>
+
+                <div class="field">
+                  <label for="budget-guests">Guest count</label>
+                  <input id="budget-guests" type="number" min="20" max="600" value="150" data-budget-guests />
+                </div>
+
+                <div class="field">
+                  <label for="budget-venue-style">Venue style</label>
+                  <select id="budget-venue-style" data-budget-venue>
+                    <option value="garden">Garden estate</option>
+                    <option value="church">Church + reception</option>
+                    <option value="ballroom" selected>Ballroom</option>
+                    <option value="beach">Beach destination</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="budget-service-tier">Planning support</label>
+                  <select id="budget-service-tier" data-budget-service>
+                    <option value="full" selected>Full planning</option>
+                    <option value="partial">Partial planning</option>
+                    <option value="coordination">On-the-day coordination</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="budget-priority">Top priority</label>
+                  <select id="budget-priority" data-budget-priority>
+                    <option value="balanced" selected>Balanced wedding</option>
+                    <option value="design">Styling and florals</option>
+                    <option value="guest">Guest experience</option>
+                    <option value="media">Photo and video</option>
+                  </select>
+                </div>
+
+                <div class="field field--toggle">
+                  <label for="budget-travel">Destination or travel-heavy setup</label>
+                  <div class="toggle-card">
+                    <input id="budget-travel" type="checkbox" data-budget-travel />
+                    <span>Add transport, logistics, and reserve pressure</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="calculator-card reveal">
+              <div class="budget-summary">
+                <article class="feature-card surface-card--soft">
+                  <span class="feature-card__kicker">Planned budget</span>
+                  <strong data-budget-total-value>PHP 650,000</strong>
+                </article>
+                <article class="feature-card surface-card--soft">
+                  <span class="feature-card__kicker">Guest count</span>
+                  <strong data-budget-guest-value>150 guests</strong>
+                </article>
+                <article class="feature-card surface-card--soft">
+                  <span class="feature-card__kicker">Reserve target</span>
+                  <strong data-budget-reserve-value>PHP 0</strong>
+                </article>
+                <article class="feature-card surface-card--soft">
+                  <span class="feature-card__kicker">Budget health</span>
+                  <strong data-budget-health-value>Balanced</strong>
+                </article>
+              </div>
+
+              <div class="budget-table-wrap">
+                <table class="budget-table">
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Share</th>
+                      <th>Suggested amount</th>
+                      <th>Planner note</th>
+                    </tr>
+                  </thead>
+                  <tbody data-budget-breakdown></tbody>
+                </table>
+              </div>
+
+              <p class="budget-note" data-budget-note></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header reveal">
+            <p class="section-label">Venue direction</p>
+            <h2>Different settings create different kinds of weddings.</h2>
+            <p>We help couples choose what looks right and runs right.</p>
+          </div>
+
+          <div class="venue-grid">
+            <article class="venue-card reveal">
+              <div class="venue-card__image">
+                <img src="assets/images/venues/garden-venue.jpg" alt="Garden wedding venue" loading="lazy" />
+              </div>
+              <div class="venue-card__body">
+                <span class="venue-card__type">Garden</span>
+                <h3>Soft light, romantic movement</h3>
+                <p>Best for airy ceremonies and floral-led styling.</p>
+                <div class="venue-card__meta">
+                  <span class="pill">120 to 180 guests</span>
+                  <span class="pill">Rain plan required</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="venue-card reveal">
+              <div class="venue-card__image">
+                <img src="assets/images/venues/beach-venue.jpg" alt="Beach wedding venue" loading="lazy" />
+              </div>
+              <div class="venue-card__body">
+                <span class="venue-card__type">Beach</span>
+                <h3>Destination energy</h3>
+                <p>Great for sunset vows and relaxed weekend celebrations.</p>
+                <div class="venue-card__meta">
+                  <span class="pill">80 to 140 guests</span>
+                  <span class="pill">Wind-aware styling</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="venue-card reveal">
+              <div class="venue-card__image">
+                <img src="assets/images/venues/church-venue.jpg" alt="Church wedding venue" loading="lazy" />
+              </div>
+              <div class="venue-card__body">
+                <span class="venue-card__type">Church</span>
+                <h3>Formal and timeless</h3>
+                <p>Ideal for classic processions and heritage architecture.</p>
+                <div class="venue-card__meta">
+                  <span class="pill">100 to 250 guests</span>
+                  <span class="pill">Permit scheduling</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="venue-card reveal">
+              <div class="venue-card__image">
+                <img src="assets/images/venues/ballroom-venue.jpg" alt="Ballroom wedding venue" loading="lazy" />
+              </div>
+              <div class="venue-card__body">
+                <span class="venue-card__type">Ballroom</span>
+                <h3>Grand and controlled</h3>
+                <p>Strong for large guest lists, formal programs, and evening lighting.</p>
+                <div class="venue-card__meta">
+                  <span class="pill">180 to 400 guests</span>
+                  <span class="pill">Weather-safe</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header reveal">
+            <p class="section-label">Client words</p>
+            <h2>What couples remember most is how the day felt.</h2>
+          </div>
+
+          <div class="card-grid card-grid--3">
+            <article class="testimonial-card reveal">
+              <h3>Calm from start to finish</h3>
+              <p>We never felt lost. Every supplier knew the plan and every transition felt natural.</p>
+              <footer>Camille &amp; Enrique<small>Cathedral ceremony</small></footer>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <h3>Beautiful and organized</h3>
+              <p>The styling looked effortless, but the real strength was how smoothly the team handled the day.</p>
+              <footer>Aira &amp; Paolo<small>Garden wedding</small></footer>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <h3>Exactly the atmosphere we wanted</h3>
+              <p>Warm, elegant, and never rushed. Our families were able to enjoy everything.</p>
+              <footer>Nicole &amp; Marco<small>Ballroom reception</small></footer>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--tight">
+          <div class="signature-banner reveal">
+            <h2>Your wedding can feel elevated and easy at the same time.</h2>
+            <p>Tell us your date, venue style, and guest count. We will help you shape the right plan from the start.</p>
+            <div class="button-group">
+              <a class="button button--primary" href="contact.html">Start Your Inquiry</a>
+              <a class="button button--soft" href="services.html">View Services</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

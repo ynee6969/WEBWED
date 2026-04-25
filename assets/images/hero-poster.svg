@@ -1,0 +1,31 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#251B18"/>
+  <rect width="1600" height="900" fill="url(#paint0_linear_1_2)"/>
+  <path d="M0 692C123 638 239 611 348 611C483 611 621 670 783 670C941 670 1060 595 1237 595C1365 595 1486 636 1600 708V900H0V692Z" fill="url(#paint1_linear_1_2)"/>
+  <circle cx="1320" cy="164" r="210" fill="url(#paint2_radial_1_2)" fill-opacity="0.8"/>
+  <circle cx="1268" cy="120" r="132" fill="url(#paint3_radial_1_2)" fill-opacity="0.55"/>
+  <path d="M227 215C315 159 448 132 559 163C683 198 730 288 834 316C945 346 1037 293 1119 253" stroke="#E4C79B" stroke-opacity="0.46" stroke-width="2"/>
+  <path d="M233 251C325 199 444 184 548 214C663 247 746 334 841 355C939 376 1021 346 1096 309" stroke="#F1DACE" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="210" y="430" fill="#FFF7EF" font-family="Georgia, serif" font-size="118" letter-spacing="2">Vows &amp; Veil</text>
+  <text x="214" y="490" fill="#F5E4D8" font-family="Arial, sans-serif" font-size="30" letter-spacing="12">LUXURY WEDDING PLANNING</text>
+  <text x="214" y="578" fill="#FFF7EF" font-family="Georgia, serif" font-size="54">From dream to "I do"</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="218" y1="70" x2="1364" y2="878" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#51362D"/>
+      <stop offset="0.48" stop-color="#8C6551"/>
+      <stop offset="1" stop-color="#D8B39A"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_1_2" x1="800" y1="595" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A120F" stop-opacity="0"/>
+      <stop offset="1" stop-color="#120B09"/>
+    </linearGradient>
+    <radialGradient id="paint2_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 164) rotate(90) scale(210)">
+      <stop stop-color="#EAC898"/>
+      <stop offset="1" stop-color="#EAC898" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint3_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1268 120) rotate(90) scale(132)">
+      <stop stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FFF8F0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
