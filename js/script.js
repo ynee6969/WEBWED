@@ -1,5 +1,5 @@
 const SITE_CONFIG = {
-  email: "vowsandveil@gmail.com",
+  email: "vowsandveils@gmail.com",
   phoneDisplay: "09456918967",
   phoneHref: "09456918967",
   nav: [
@@ -1066,6 +1066,11 @@ function initContactForm() {
     event.preventDefault();
     setStatus("");
 
+    if (window.location.protocol === "file:") {
+      setStatus("The live inquiry form works on the deployed Vercel site or a local web server, not from a file preview.", "error");
+      return;
+    }
+
     if (!validateForm()) {
       setStatus("Please correct the highlighted fields before sending your inquiry.", "error");
       return;
@@ -1080,28 +1085,27 @@ function initContactForm() {
     submitButton.textContent = "Sending...";
 
     try {
+      const payload = Object.fromEntries(new FormData(form).entries());
       const response = await fetch(ajaxAction, {
         method: "POST",
         headers: {
           Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: new FormData(form),
+        body: JSON.stringify(payload),
       });
 
-      const payload = await response.json().catch(() => ({}));
+      const result = await response.json().catch(() => ({}));
 
-      if (!response.ok || payload.success === false) {
-        throw new Error(payload.message || "Unable to send inquiry.");
+      if (!response.ok || result.success !== true) {
+        throw new Error(result.message || "Unable to send inquiry.");
       }
 
       form.reset();
       fields.forEach((field) => clearValidation(field));
       setStatus("Your inquiry was sent successfully. We will reply within one business day.", "success");
-    } catch {
-      setStatus("The direct form request could not finish here, so we are opening the secure fallback form handler.", "success");
-      submitButton.textContent = "Opening...";
-      window.setTimeout(() => form.submit(), 250);
-      return;
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "We could not send your inquiry right now. Please try again.", "error");
     } finally {
       submitButton.disabled = false;
       submitButton.textContent = originalLabel;
