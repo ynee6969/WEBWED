@@ -1,5 +1,5 @@
 const SITE_CONFIG = {
-  email: "hello@vowsandveil.com",
+  email: "vowsandveil@gmail.com",
   phoneDisplay: "09456918967",
   phoneHref: "09456918967",
   nav: [
@@ -175,9 +175,6 @@ function createFooter() {
   footer.innerHTML = `
     <div class="page-footer__panel">
       <p>&copy; <span data-year></span> Vows &amp; Veil. Luxury wedding planning, styling, and coordination.</p>
-      <div class="footer-links">
-        ${SITE_CONFIG.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("")}
-      </div>
     </div>
   `;
 
