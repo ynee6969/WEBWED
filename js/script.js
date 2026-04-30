@@ -1,5 +1,5 @@
 const SITE_CONFIG = {
-  email: "vowsandveils@gmail.com",
+  email: "vowsandveilsinquiry@gmail.com",
   phoneDisplay: "09456918967",
   phoneHref: "09456918967",
   nav: [

@@ -1,5 +1,7 @@
 const nodemailer = require("nodemailer");
 
+const DEFAULT_STUDIO_EMAIL = "vowsandveilsinquiry@gmail.com";
+
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
   res.setHeader("Content-Type", "application/json");
@@ -41,9 +43,68 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function getDeliveryErrorMessage(error) {
+  const code = String(error?.code || "").toUpperCase();
+  const responseCode = Number(error?.responseCode || 0);
+  const responseText = String(error?.response || error?.message || "").toLowerCase();
+
+  if (
+    code === "EAUTH" ||
+    responseCode === 535 ||
+    responseText.includes("badcredentials") ||
+    responseText.includes("invalid login") ||
+    responseText.includes("username and password not accepted")
+  ) {
+    return "Email login failed on Vercel. Update GMAIL_USER and GMAIL_APP_PASSWORD for the deployed project, then redeploy.";
+  }
+
+  if (code === "ECONNECTION" || code === "ETIMEDOUT") {
+    return "The email service could not be reached right now. Please try again in a moment.";
+  }
+
+  return "We could not deliver your inquiry right now. Please try again in a moment.";
+}
+
+function readRuntimeConfig() {
+  return {
+    smtpUser: String(process.env.GMAIL_USER || DEFAULT_STUDIO_EMAIL).trim(),
+    smtpPass: String(process.env.GMAIL_APP_PASSWORD || "").replace(/\s+/g, "").trim(),
+    contactRecipient: String(process.env.CONTACT_EMAIL_TO || DEFAULT_STUDIO_EMAIL).trim(),
+  };
+}
+
+function buildTransporter({ smtpUser, smtpPass }) {
+  return nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: smtpUser,
+      pass: smtpPass,
+    },
+  });
+}
+
+function getHealthPayload(config) {
+  return {
+    success: true,
+    provider: "gmail",
+    configured: Boolean(config.smtpUser && config.smtpPass && config.contactRecipient),
+    gmailUser: config.smtpUser || "",
+    recipient: config.contactRecipient || "",
+    hasAppPassword: Boolean(config.smtpPass),
+  };
+}
+
 module.exports = async function handler(req, res) {
+  const runtimeConfig = readRuntimeConfig();
+
+  if (req.method === "GET") {
+    return sendJson(res, 200, getHealthPayload(runtimeConfig));
+  }
+
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader("Allow", "GET, POST");
     return sendJson(res, 405, {
       success: false,
       message: "Method not allowed.",
@@ -81,24 +142,16 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  const smtpUser = process.env.GMAIL_USER || "vowsandveils@gmail.com";
-  const smtpPass = process.env.GMAIL_APP_PASSWORD;
-  const contactRecipient = process.env.CONTACT_EMAIL_TO || "vowsandveils@gmail.com";
+  const { smtpUser, smtpPass, contactRecipient } = runtimeConfig;
 
-  if (!smtpPass) {
+  if (!smtpUser || !contactRecipient || !smtpPass) {
     return sendJson(res, 503, {
       success: false,
-      message: "Email delivery is not configured yet on the deployed site.",
+      message: "Email delivery is not configured yet on the deployed site. Add GMAIL_USER, GMAIL_APP_PASSWORD, and CONTACT_EMAIL_TO in Vercel, then redeploy.",
     });
   }
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
-  });
+  const transporter = buildTransporter(runtimeConfig);
 
   const subject = `New Vows & Veil inquiry from ${name}`;
   const submittedAt = new Date().toLocaleString("en-PH", {
@@ -140,10 +193,12 @@ module.exports = async function handler(req, res) {
   ].join("\n");
 
   try {
+    await transporter.verify();
+
     await transporter.sendMail({
       from: `"Vows & Veil Website" <${smtpUser}>`,
       to: contactRecipient,
-      replyTo: email,
+      replyTo: `${name} <${email}>`,
       subject,
       text,
       html,
@@ -158,7 +213,7 @@ module.exports = async function handler(req, res) {
 
     return sendJson(res, 502, {
       success: false,
-      message: "We could not deliver your inquiry right now. Please try again in a moment.",
+      message: getDeliveryErrorMessage(error),
     });
   }
 };
